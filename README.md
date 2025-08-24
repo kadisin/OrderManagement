@@ -41,7 +41,7 @@ Each service is containerized using Docker and deployed via **Terraform-based in
                      [Service Bus Topic]
                         ↓
                [NotificationService] --> [Email/Logs]
-
+```
 
 ## Services
 
@@ -71,8 +71,6 @@ Client → OrderController → OrderService → Azure SQL
                                         ↘
                                        Azure Service Bus Topic (OrderCreated)
 ```
-
----
 
 ### 📨 NotificationService
 
