@@ -1,0 +1,13 @@
+# Ignore build outputs
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# Rider
+.idea/
+
+# Mac & Windows crap
+.DS_Store
+Thumbs.db
