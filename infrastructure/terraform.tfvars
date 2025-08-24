@@ -1,5 +1,0 @@
-location               = "westeurope"
-resource_group_name    = "order-notification-rg"
-servicebus_namespace_name = "orderbusnamespace"
-servicebus_topic_name  = "ordercreatedtopic"
-aks_cluster_name       = "order-cluster"
