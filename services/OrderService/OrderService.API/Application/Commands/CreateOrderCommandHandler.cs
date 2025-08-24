@@ -18,6 +18,7 @@ namespace OrderService.Application.Commands
         {
             var order = new Order(Guid.NewGuid(), request.CustomerName);
             await _repository.AddAsync(order);
+            await _repository.SaveChangesAsync(cancellationToken);
             return order.Id;
         }
     }

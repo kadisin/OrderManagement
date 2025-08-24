@@ -21,9 +21,9 @@ namespace OrderService.Infrastructure.Persistence
             await _context.Orders.AddAsync(order);
         }
 
-        public async Task SaveChangesAsync()
+        public async Task SaveChangesAsync(CancellationToken cancellationToken)
         {
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync(cancellationToken);
         }
     }
 }

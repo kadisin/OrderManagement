@@ -6,5 +6,7 @@ namespace OrderService.Infrastructure.Persistence
     {
         Task AddAsync(Order order);
         Task<Order> GetByIdAsync(Guid id);
+
+        Task SaveChangesAsync(CancellationToken cancellationToken);
     }
 }
