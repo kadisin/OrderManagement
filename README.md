@@ -140,7 +140,7 @@ infrastructure/
   - `servicebus/` – actions to set up Azure Service Bus components  
   - `sql/` – logic for provisioning Azure SQL resources
 
-## Communication Overview
+## Communication
 
 This section describes the communication between the two core microservices in the OrderManagement system:
 
@@ -158,21 +158,12 @@ This section describes the communication between the two core microservices in t
 4. **NotificationService** is listening on the corresponding **subscription**.
 5. Upon receiving a message, it processes the order event (e.g., logs it, triggers an email notification, etc.).
 
-### Synchronous API Communication (Optional Extension)
-
-- Future enhancements may include direct API calls between services for synchronous operations, such as:
-  - `OrderService` retrieving notification status from `NotificationService`.
-  - Health check endpoints between services.
-
 ### Communication Summary
 
 | Component              | Mechanism                        | Purpose                          |
 |------------------------|----------------------------------|----------------------------------|
 | OrderService           | REST API + Service Bus topic     | Create orders + publish events   |
 | NotificationService    | Service Bus subscription         | Consume order events             |
-| Future integrations    | REST API calls                   | Synchronous inter-service calls  |
-
----
 
 ### Why this approach?
 
