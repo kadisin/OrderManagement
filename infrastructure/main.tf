@@ -16,8 +16,8 @@ module "servicebus" {
   resource_group_name = azurerm_resource_group.main.name
   location            = var.location
   sku                 = var.servicebus_sku
-  topic_name          = "orders-topic"
-  subscription_name   = "notifications-subscription"
+  topic_name          = "orders-topic-${var.env}"
+  subscription_name   = "notifications-subscription-${var.env}"
 }
 
 module "sql" {
@@ -26,7 +26,7 @@ module "sql" {
   location            = var.location
   admin_username      = var.sql_admin_username
   admin_password      = var.sql_admin_password
-  database_name       = "orderdb"
+  database_name       = "orderdb-${var.env}"
 }
 
 module "logs" {
