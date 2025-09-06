@@ -111,6 +111,7 @@ infrastructure/
     ├── aks/            # AKS (Azure Kubernetes Service) provisioning
     ├── servicebus/     # Azure Service Bus namespace, topics, and subscriptions
     └── sql/            # Azure SQL Server and Database configuration
+    └── logs/           # Azure Application Insights + Log Analytics workspace
 ```
 
 ### Component Overview
@@ -124,6 +125,8 @@ infrastructure/
   - Azure Kubernetes Service (AKS)  
   - Azure Service Bus (topic and subscription)  
   - Azure SQL Database (if used)
+  - Azure Application Insights
+  - Azure Log Analytics
 
 - **`variables.tf`**  
   Defines customizable inputs such as region, resource names, and instance specifications to support environment-specific configurations.
@@ -139,6 +142,7 @@ infrastructure/
   - `aks/` – provisioning logic for AKS cluster  
   - `servicebus/` – actions to set up Azure Service Bus components  
   - `sql/` – logic for provisioning Azure SQL resources
+  - `logs/` - sets up Azure Application Insights and Log Analytics workspace for monitoring, telemetry, and diagnostics
 
 ## Communication
 
