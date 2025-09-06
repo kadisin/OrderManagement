@@ -28,3 +28,12 @@ module "sql" {
   admin_password      = var.sql_admin_password
   database_name       = "orderdb"
 }
+
+module "logs" {
+  source              = "./modules/logs"
+  resource_group_name = azurerm_resource_group.main.name
+  location            = var.location
+
+  workspace_name    = "log-${var.env}"
+  appinsights_name  = "appi-${var.env}"
+}
